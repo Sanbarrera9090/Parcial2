@@ -8,6 +8,7 @@ public class Group {
     private String name;
     private List<Project> projects;
 
+
     public Group(String name) {
         this.name = name;
         this.projects = new ArrayList<>();
