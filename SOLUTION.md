@@ -2,7 +2,7 @@
 
 Tenemos 3 acciones importantes en excepciones, cuando intenta solucionar un error (palabra reservada (Try)). Cuando atrapa los errores (palabra reservada (catch)) y con la palabra  reservada (finally) 
 
-cuando lanzamos una excepcion, propagamos la excepcion y cuando capturamos la excepcion 
+cuando lanzamos una excepcion avisa en el compilador que esta teniendo un error (Palabra reservada Throw) , propagamos la excepcion (throws Exception) y cuando capturamos la excepcion 
 
         try {
             new Cube(-1);
@@ -14,7 +14,7 @@ cuando lanzamos una excepcion, propagamos la excepcion y cuando capturamos la ex
 
 ¿Qué es sobre-escritura de métodos? ¿Por qué aplicarla? ¿Cómo impedir que se sobre-escriba un método?.
 
-cuando una clase hereda metodos de una clase padre se "sobre escribe" el metodo
+cuando una clase hereda metodos de una clase padre se "sobre escribe" el metodo que tenga esa clase padre en la clase hija
 Se utiliza cuando se tienen varias clases y se heredan los metodos por ejemplo la super clase "animal" tiene un metodo llamado "Comer" y las clases hijas "Persona" y "Zombie" heredan este metodo pero ninguno de ellos come lo mismo
 
 public class animal{
