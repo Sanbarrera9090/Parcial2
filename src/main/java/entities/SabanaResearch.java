@@ -8,6 +8,9 @@ public class SabanaResearch {
 
     private List<Group> groups;
     private List<Summary> summaries;
+    private List<Course> courses;
+    private List<Student> students;
+
 
     public SabanaResearch(List<Group> groups) {
         this.groups = groups;
@@ -22,13 +25,15 @@ public class SabanaResearch {
         return this.summaries.size();
     }
 
-    /**
-     * Create a summary entry in the current date.
-     * - Calculate the count of active projects.
-     *
-     * @return The new Summary entry.
-     */
-    public Summary createSummaryEntry() {
-        return null;
+
+    public Summary createSummaryEntry()
+    {
+        int count=0;
+        for(int i=0;groups.size()<i;i++) {
+            count = (groups.get(i).CountActiveProjects());
+        }
+        Summary summary= new Summary(count,LocalDate.now());
+        summaries.add(summary);
+        return summary;
     }
 }
