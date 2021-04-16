@@ -33,7 +33,7 @@ public class Group {
         return conta;
     }
     /**
-     * adder
+     * adder project
      */
     public void addProject(Project plan) {
         this.projects.add(plan);
