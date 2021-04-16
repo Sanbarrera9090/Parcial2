@@ -11,3 +11,20 @@ cuando lanzamos una excepcion, propagamos la excepcion y cuando capturamos la ex
         }finally{
         sout("proceso terminado");
     }
+
+¿Qué es sobre-escritura de métodos? ¿Por qué aplicarla? ¿Cómo impedir que se sobre-escriba un método?.
+
+cuando una clase hereda metodos de una clase padre se "sobre escribe" el metodo
+Se utiliza cuando se tienen varias clases y se heredan los metodos por ejemplo la super clase "animal" tiene un metodo llamado "Comer" y las clases hijas "Persona" y "Zombie" heredan este metodo pero ninguno de ellos come lo mismo
+
+public class animal{
+public void comer()
+
+La clase persona y zombie heredan este metodo
+
+public class zombie extends animal{
+@Override
+public void comer(){
+sout ("humano")
+
+la palabra reservada @Override nos permite sobreescribir los metodos
