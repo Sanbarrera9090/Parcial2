@@ -99,7 +99,7 @@ public class ProjectTest {
         SabanaResearchException exception = assertThrows(SabanaResearchException.class, () -> badFormedProject6.getDuration());
         assertEquals(SabanaResearchException.BAD_FORMED_NORMAL_ACTIVITY, exception.getMessage());
     }
-
+    @Test
     private void setupWellFormedProject() {
 
         Group group = new Group(faker.team().name());
@@ -116,13 +116,13 @@ public class ProjectTest {
         DocumentedActivity documentedActivity = new DocumentedActivity(faker.team().name(), Activity.ACTIVE_STATE, iteration, activity);
         documentedActivity.addQuestion(new Question(Question.EASY_QUESTION, faker.team().name(), Duration.ofDays(1)));
     }
-
+    @Test
     private void setupBadFormedProject1() {
 
         Group group = new Group(faker.team().name());
         badFormedProject1 = new Project(faker.team().name(), LocalDate.now().minusDays(10), LocalDate.now().plusDays(10), group);
     }
-
+    @Test
     private void setupBadFormedProject2() {
 
         Group group = new Group(faker.team().name());
@@ -142,7 +142,7 @@ public class ProjectTest {
         // Create Iteration without activities
         new Iteration(faker.team().name(), badFormedProject2);
     }
-
+    @Test
     private void setupBadFormedProject3() {
 
         Group group = new Group(faker.team().name());
@@ -162,7 +162,7 @@ public class ProjectTest {
         // Create a Normal Activity without steps
         new NormalActivity(faker.team().name(), Activity.ACTIVE_STATE, iteration);
     }
-
+    @Test
     private void setupBadFormedProject4() {
 
         Group group = new Group(faker.team().name());
@@ -184,7 +184,7 @@ public class ProjectTest {
         activity2.addStep(new Step(faker.team().name(), Duration.ofDays(1)));
         new DocumentedActivity(faker.team().name(), Activity.ACTIVE_STATE, iteration, activity2);
     }
-
+    @Test
     private void setupBadFormedProject5() {
 
         Group group = new Group(faker.team().name());
@@ -205,7 +205,7 @@ public class ProjectTest {
         DocumentedActivity documentedActivity2 = new DocumentedActivity(faker.team().name(), Activity.ACTIVE_STATE, iteration, null);
         documentedActivity2.addQuestion(new Question(Question.EASY_QUESTION, faker.team().name(), Duration.ofDays(1)));
     }
-
+    @Test
     private void setupBadFormedProject6() {
 
         Group group = new Group(faker.team().name());
